@@ -1,4 +1,4 @@
-package org.hh.core.utils;
+package org.hh.core.exception;
 
 /**
  * 

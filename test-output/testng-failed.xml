@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" parallel="none">
+  <parameter name="imageEnabled" value="2"/>
+  <parameter name="url" value="http://hh.ru/price"/>
+  <test name="Test(failed)" parallel="none">
+    <parameter name="imageEnabled" value="2"/>
+    <parameter name="url" value="http://hh.ru/price"/>
+    <groups>
+      <run>
+        <include name="Test_Price"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="org.hh.test.TestRunner">
+        <methods>
+          <include name="Test_Price" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- org.hh.test.TestRunner -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

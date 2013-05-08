@@ -24,7 +24,7 @@ public class LoginPage extends AbstractPage {
 	 * @see org.hh.core.pages.AbstractPage#OpenPage(java.lang.String)
 	 */
 	@Override
-	public void OpenPage(String sUrl) {
+	public void openPage(String url) {
 		// TODO Auto-generated method stub
 
 	}

@@ -9,7 +9,7 @@ import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.hh.core.utils.ExceptFailTest;
+import org.hh.core.exception.ExceptFailTest;
 import org.hh.core.utils.Proper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -38,7 +38,7 @@ import org.testng.Assert;
 public abstract class AbstractPage {
 	protected WebDriver driver;
 	protected int nTimeWait;
-	protected String sUrl;
+	protected String url;
 
 	/**
 	 * Gets web driver
@@ -60,7 +60,7 @@ public abstract class AbstractPage {
 	 * TODO: Sometimes can't work, reason is some problems with full page
 	 * loading, need to investigate
 	 */
-	public void CloseDriver() {
+	public void closeDriver() {
 		driver.close();
 	}
 
@@ -69,7 +69,7 @@ public abstract class AbstractPage {
 	 * 
 	 * @param sUrl
 	 */
-	public abstract void OpenPage(String sUrl);
+	public abstract void openPage(String sUrl);
 
 	/**
 	 * Check presence of elements by different parameters
@@ -78,7 +78,7 @@ public abstract class AbstractPage {
 	 * @param sLocator
 	 * @throws ExceptFailTest
 	 */
-	protected void CheckElementPresent(final int nKey, final String sLocator)
+	protected void checkElementPresent(final int nKey, final String sLocator)
 			throws ExceptFailTest {
 		WebElement wElement = null;
 		WebDriverWait wWaitDriver = new WebDriverWait(driver, nTimeWait);
@@ -122,7 +122,7 @@ public abstract class AbstractPage {
 	 * 
 	 * @param wElement
 	 */
-	protected void DoubleClickElement(WebElement wElement) {
+	protected void doubleClickElement(WebElement wElement) {
 		Actions builder;
 		Action dClick;
 		builder = new Actions(driver);
@@ -136,7 +136,7 @@ public abstract class AbstractPage {
 	 * 
 	 * @param wElement
 	 */
-	protected void ClickElement(WebElement wElement) {
+	protected void clickElement(WebElement wElement) {
 		Actions builder;
 		Action cClick;
 		builder = new Actions(driver);
@@ -152,7 +152,7 @@ public abstract class AbstractPage {
 	 * @param key
 	 * @param n
 	 */
-	protected void KeyPress(WebElement wElement, Keys key, int n) {
+	protected void keyPress(WebElement wElement, Keys key, int n) {
 		while (n > 0) {
 			wElement.sendKeys(key);
 			n--;
@@ -165,7 +165,7 @@ public abstract class AbstractPage {
 	 * @param wElement
 	 * @param sText
 	 */
-	protected void SendText(WebElement wElement, String sText) {
+	protected void sendText(WebElement wElement, String sText) {
 		wElement.clear();
 		wElement.sendKeys(sText);
 	}
@@ -178,7 +178,7 @@ public abstract class AbstractPage {
 	 * @param wElement
 	 */
 	@SuppressWarnings("deprecation")
-	protected void ScrollToElement(WebElement wElement) {
+	protected void scrollToElement(WebElement wElement) {
 		((Locatable) wElement).getLocationOnScreenOnceScrolledIntoView();
 	}
 
@@ -189,7 +189,7 @@ public abstract class AbstractPage {
 	 * 
 	 * @param sName
 	 */
-	protected void CaptureScreenshot(String sName) {
+	protected void captureScreenshot(String sName) {
 		File screenshot = ((TakesScreenshot) driver)
 				.getScreenshotAs(OutputType.FILE);
 		try {
@@ -209,7 +209,7 @@ public abstract class AbstractPage {
 	 * @param sText
 	 * @throws ExceptFailTest
 	 */
-	protected void CheckTextForElement(WebElement wElement, String sText)
+	protected void checkTextForElement(WebElement wElement, String sText)
 			throws ExceptFailTest {
 		try {
 			if (wElement.getTagName().equals("input"))
@@ -231,7 +231,7 @@ public abstract class AbstractPage {
 	 * @throws ExceptFailTest
 	 */
 	@Deprecated
-	protected void CheckCssElement(WebElement wElement, String sPropertyName,
+	protected void checkCssElement(WebElement wElement, String sPropertyName,
 			String sExcpextedCssValue) throws ExceptFailTest {
 		try {
 			Assert.assertTrue(wElement.getCssValue(sPropertyName).equals(
@@ -250,7 +250,7 @@ public abstract class AbstractPage {
 	 * @param sExcpextedAtributeValue
 	 * @throws ExceptFailTest
 	 */
-	protected void ChecksAtributeElement(final WebElement wElement,
+	protected void checksAtributeElement(final WebElement wElement,
 			final String sAtributeName, final String sExcpextedAtributeValue)
 			throws ExceptFailTest {
 		boolean bFlag = false;
@@ -279,7 +279,7 @@ public abstract class AbstractPage {
 	 * @param nOperation
 	 * @throws ExceptFailTest
 	 */
-	protected void CheckEnableElement(WebElement wElement, int nOperation)
+	protected void checkEnableElement(WebElement wElement, int nOperation)
 			throws ExceptFailTest {
 		if (!wElement.isEnabled()) {
 			print("Can't get element \"" + wElement.getText() + "\"");
@@ -299,7 +299,7 @@ public abstract class AbstractPage {
 	 * @param sName
 	 * @throws ExceptFailTest
 	 */
-	protected void CheckNotVisibleElement(String sLocator, String sName)
+	protected void checkNotVisibleElement(String sLocator, String sName)
 			throws ExceptFailTest {
 		WebDriverWait wait = new WebDriverWait(driver, nTimeWait);
 		try {
@@ -319,7 +319,7 @@ public abstract class AbstractPage {
 	 * @throws ExceptFailTest
 	 */
 	@Deprecated
-	protected void CheckVisibleElement(WebElement wElement, String sName)
+	protected void checkVisibleElement(WebElement wElement, String sName)
 			throws ExceptFailTest {
 		WebDriverWait wait = new WebDriverWait(driver, nTimeWait);
 		try {
@@ -337,7 +337,7 @@ public abstract class AbstractPage {
 	 * @return
 	 * @throws ExceptFailTest
 	 */
-	protected WebElement[] GetAllWebElements(final String sLocator)
+	protected WebElement[] getAllWebElements(final String sLocator)
 			throws ExceptFailTest {
 
 		WebElement wTemp[];
@@ -379,7 +379,7 @@ public abstract class AbstractPage {
 	 * @param sName
 	 * @throws ExceptFailTest
 	 */
-	protected void CheckIsSelectedElement(final WebElement wElement,
+	protected void checkIsSelectedElement(final WebElement wElement,
 			final Boolean bResult, String sName) throws ExceptFailTest {
 		WebDriverWait wait = new WebDriverWait(driver, nTimeWait);
 		try {
@@ -399,7 +399,7 @@ public abstract class AbstractPage {
 	 * @param sName
 	 * @return
 	 */
-	protected boolean CheckElement(final String sLocator, String sName) {
+	protected boolean checkElement(final String sLocator, String sName) {
 		WebElement wElement = null;
 		WebDriverWait wWaitDriver = new WebDriverWait(driver, 2);
 		try {
@@ -432,7 +432,7 @@ public abstract class AbstractPage {
 	 * 
 	 * @param i
 	 */
-	public void Sleep(int i) {
+	public void sleep(int i) {
 		try {
 			Thread.sleep(i);
 		} catch (InterruptedException exc) {
@@ -446,7 +446,7 @@ public abstract class AbstractPage {
 	 * @param nLimit
 	 * @return
 	 */
-	protected int GetRandomNumber(int nLimit) {
+	protected int getRandomNumber(int nLimit) {
 		Random r = new Random();
 		return r.nextInt(nLimit);
 	}

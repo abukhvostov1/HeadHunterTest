@@ -32,7 +32,7 @@ public class BaseTest {
 	 * @param n
 	 * @return
 	 */
-	private FirefoxProfile GetFireFoxProfile(int n) {
+	private FirefoxProfile getFireFoxProfile(int n) {
 		FirefoxProfile profile = new FirefoxProfile();
 		profile.setPreference("network.http.use-cache", false);
 		profile.setPreference("permissions.default.image", n);
@@ -47,9 +47,10 @@ public class BaseTest {
 	 * @param n
 	 * @return
 	 */
-	public WebDriver GetWebDriver(int n) {
+	public WebDriver getWebDriver(int n) {
 		if (driver == null) {
-			driver = new FirefoxDriver(GetFireFoxProfile(n));
+			System.out.println(n);//thats mother fucker gets number!!!!! Why eception????
+			driver = new FirefoxDriver(getFireFoxProfile(n));
 			driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
 			if (Proper.GetProperty("lightElement").equals("yes")) {
 				event_driver = new EventFiringWebDriver(this.driver);
@@ -75,9 +76,10 @@ public class BaseTest {
 		 * return new InternetExplorerDriver();}
 		 */
 	}
-	
+
 	/**
 	 * We should print any <generic> object
+	 * 
 	 * @param obj
 	 */
 	public <T> void print(T obj) {
@@ -90,7 +92,7 @@ public class BaseTest {
 	 * 
 	 * @param sName
 	 */
-	protected void CaptureScreenshot(String sName) {
+	protected void captureScreenshot(String sName) {
 		File screenshot = ((TakesScreenshot) driver)
 				.getScreenshotAs(OutputType.FILE);
 		String path = "src\\" + screenshot.getName();
