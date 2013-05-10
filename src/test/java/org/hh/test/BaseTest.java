@@ -49,8 +49,6 @@ public class BaseTest {
 	 */
 	public WebDriver getWebDriver(int n) {
 		if (driver == null) {
-			System.out.println(n);// thats mother fucker gets number!!!!! Why
-									// exception????
 			driver = new FirefoxDriver(getFireFoxProfile(n));
 			driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
 			if (Proper.getProperty("lightElement").equals("yes")) {
