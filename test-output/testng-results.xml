@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="5640" started-at="2013-05-08T13:26:51Z" finished-at="2013-05-08T13:26:57Z">
+  <suite name="Suite" duration-ms="20557" started-at="2013-05-10T05:06:20Z" finished-at="2013-05-10T05:06:41Z">
     <groups>
       <group name="Test_Price">
         <method signature="TestRunner.Test_Price(java.lang.String, java.lang.String)[pri:0, instance:org.hh.test.TestRunner@150cf54]" name="Test_Price" class="org.hh.test.TestRunner"/>
       </group> <!-- Test_Price -->
     </groups>
-    <test name="Test" duration-ms="5640" started-at="2013-05-08T13:26:51Z" finished-at="2013-05-08T13:26:57Z">
+    <test name="Test" duration-ms="20557" started-at="2013-05-10T05:06:20Z" finished-at="2013-05-10T05:06:41Z">
       <class name="org.hh.test.TestRunner">
-        <test-method status="FAIL" signature="Test_Price(java.lang.String, java.lang.String)[pri:0, instance:org.hh.test.TestRunner@150cf54]" name="Test_Price" duration-ms="5629" started-at="2013-05-08T16:26:51Z" finished-at="2013-05-08T16:26:57Z">
+        <test-method status="FAIL" signature="Test_Price(java.lang.String, java.lang.String)[pri:0, instance:org.hh.test.TestRunner@150cf54]" name="Test_Price" duration-ms="20546" started-at="2013-05-10T08:06:20Z" finished-at="2013-05-10T08:06:41Z">
           <params>
             <param index="0">
               <value>
@@ -26,7 +26,7 @@
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at org.hh.test.BaseTest.getWebDriver(BaseTest.java:55)
+	at org.hh.test.BaseTest.getWebDriver(BaseTest.java:56)
 	at org.hh.test.TestRunner.Test_Price(TestRunner.java:27)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)

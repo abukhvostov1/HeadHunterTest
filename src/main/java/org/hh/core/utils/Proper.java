@@ -7,28 +7,22 @@ import java.util.Properties;
  * Property reader
  * 
  * @author Alexander Bukhvostov
- *
+ * 
  */
-public class Proper
-{
+public class Proper {
 	protected static Properties prop;
-	static
-	{
+	static {
 		prop = new Properties();
-		try
-		{
-			prop.load(ClassLoader.getSystemResourceAsStream("config.properties"));
-		}
-		catch(IOException exc)
-		{
-			exc.printStackTrace(); 
+		try {
+			prop.load(ClassLoader
+					.getSystemResourceAsStream("config.properties"));
+		} catch (IOException exc) {
+			exc.printStackTrace();
 			System.out.println("Can't read properties or properties problem");
 		}
 	}
-	
-	public static String GetProperty(String sKey)
-	{
+
+	public static String getProperty(String sKey) {
 		return prop.getProperty(sKey);
 	}
 }
-
