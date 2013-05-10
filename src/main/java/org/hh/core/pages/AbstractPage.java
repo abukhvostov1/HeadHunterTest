@@ -49,7 +49,7 @@ public abstract class AbstractPage {
 	 */
 	public AbstractPage(WebDriver driver) {
 		this.driver = driver;
-		nTimeWait = Integer.parseInt(Proper.GetProperty("nTimeWait"));
+		nTimeWait = Integer.parseInt(Proper.getProperty("nTimeWait"));
 		this.driver.manage().timeouts()
 				.implicitlyWait(nTimeWait, TimeUnit.SECONDS);
 	}

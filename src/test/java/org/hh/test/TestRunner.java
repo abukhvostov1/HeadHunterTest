@@ -30,7 +30,6 @@ public class TestRunner extends BaseTest {
 			priceMain.openPage(url);
 			print("Test acomplished!");
 		} finally {
-			// CaptureScreenshot("BmwFullText");
 			driver.quit();
 		}
 	}
