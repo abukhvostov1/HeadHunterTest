@@ -17,9 +17,9 @@ public class TestRunner extends BaseTest {
 
 	private PriceMain priceMain;
 
-	@Test(groups = { "Test_Price" })
+	@Test(groups = { "test_Price" })
 	@Parameters({ "url", "imageEnabled" })
-	public void Test_Price(String url, String imageEnabled)
+	public void test_Price(String url, String imageEnabled)
 			throws ExceptFailTest {
 		try {
 			System.out.println(imageEnabled);

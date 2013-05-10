@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="8252" started-at="2013-05-10T21:29:24Z" finished-at="2013-05-10T21:29:32Z">
+  <suite name="Suite" duration-ms="8861" started-at="2013-05-10T21:34:45Z" finished-at="2013-05-10T21:34:54Z">
     <groups>
-      <group name="Test_Price">
-        <method signature="TestRunner.Test_Price(java.lang.String, java.lang.String)[pri:0, instance:org.hh.test.TestRunner@192ee25]" name="Test_Price" class="org.hh.test.TestRunner"/>
-      </group> <!-- Test_Price -->
+      <group name="test_Price">
+        <method signature="TestRunner.test_Price(java.lang.String, java.lang.String)[pri:0, instance:org.hh.test.TestRunner@74d22e]" name="test_Price" class="org.hh.test.TestRunner"/>
+      </group> <!-- test_Price -->
     </groups>
-    <test name="Test" duration-ms="8252" started-at="2013-05-10T21:29:24Z" finished-at="2013-05-10T21:29:32Z">
+    <test name="Test" duration-ms="8861" started-at="2013-05-10T21:34:45Z" finished-at="2013-05-10T21:34:54Z">
       <class name="org.hh.test.TestRunner">
-        <test-method status="PASS" signature="Test_Price(java.lang.String, java.lang.String)[pri:0, instance:org.hh.test.TestRunner@192ee25]" name="Test_Price" duration-ms="8241" started-at="2013-05-11T00:29:24Z" finished-at="2013-05-11T00:29:32Z">
+        <test-method status="PASS" signature="test_Price(java.lang.String, java.lang.String)[pri:0, instance:org.hh.test.TestRunner@74d22e]" name="test_Price" duration-ms="8851" started-at="2013-05-11T00:34:45Z" finished-at="2013-05-11T00:34:54Z">
           <params>
             <param index="0">
               <value>
@@ -25,7 +25,7 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Test_Price -->
+        </test-method> <!-- test_Price -->
       </class> <!-- org.hh.test.TestRunner -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

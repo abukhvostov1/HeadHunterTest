@@ -6,7 +6,7 @@
 		<parameter name="url" value="http://hh.ru/price" />
 		<groups>
 			<run>
-				<include name="Test_Price" />
+				<include name="test_Price" />
 			</run>
 		</groups>
 		<classes>
