@@ -2,19 +2,25 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" parallel="none">
   <parameter name="imageEnabled" value="2"/>
+  <parameter name="remember" value="on"/>
+  <parameter name="userName" value="abukhvostov@mail.ru"/>
+  <parameter name="password" value="yananikita123"/>
   <parameter name="url" value="http://hh.ru/price"/>
   <test name="Test(failed)" parallel="none">
+    <parameter name="remember" value="on"/>
     <parameter name="imageEnabled" value="2"/>
+    <parameter name="userName" value="abukhvostov@mail.ru"/>
+    <parameter name="password" value="yananikita123"/>
     <parameter name="url" value="http://hh.ru/price"/>
     <groups>
       <run>
-        <include name="Test_Price"/>
+        <include name="test_Price"/>
       </run>
     </groups>
     <classes>
       <class name="org.hh.test.TestRunner">
         <methods>
-          <include name="Test_Price" invocation-numbers="0"/>
+          <include name="test_Price" invocation-numbers="0"/>
         </methods>
       </class> <!-- org.hh.test.TestRunner -->
     </classes>

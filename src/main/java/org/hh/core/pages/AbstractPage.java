@@ -12,6 +12,7 @@ import org.apache.commons.io.FileUtils;
 import org.hh.core.exception.ExceptFailTest;
 import org.hh.core.utils.Proper;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -39,6 +40,7 @@ public abstract class AbstractPage {
 	protected WebDriver driver;
 	protected int nTimeWait;
 	protected String url;
+	protected JavascriptExecutor js;
 
 	/**
 	 * Gets web driver
@@ -168,6 +170,19 @@ public abstract class AbstractPage {
 	protected void sendText(WebElement wElement, String sText) {
 		wElement.clear();
 		wElement.sendKeys(sText);
+	}
+
+	/**
+	 * Like previous function but created as a hack for send data to INPUT
+	 * element
+	 * 
+	 * @param wElement
+	 * @param sText
+	 */
+	protected void sendText(String id, String sText) {
+		js = (JavascriptExecutor) driver;
+		js.executeScript("document.getElementById('" + id
+				+ "').setAttribute('value','" + sText + "');");
 	}
 
 	/**

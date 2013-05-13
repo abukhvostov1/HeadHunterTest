@@ -2,15 +2,15 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="9186" started-at="2013-05-10T21:42:15Z" finished-at="2013-05-10T21:42:24Z">
+  <suite name="Suite" duration-ms="27345" started-at="2013-05-12T11:57:07Z" finished-at="2013-05-12T11:57:34Z">
     <groups>
       <group name="test_Price">
-        <method signature="TestRunner.test_Price(java.lang.String, java.lang.String)[pri:0, instance:org.hh.test.TestRunner@74d22e]" name="test_Price" class="org.hh.test.TestRunner"/>
+        <method signature="TestRunner.test_Price(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.hh.test.TestRunner@1bed348]" name="test_Price" class="org.hh.test.TestRunner"/>
       </group> <!-- test_Price -->
     </groups>
-    <test name="Test" duration-ms="9186" started-at="2013-05-10T21:42:15Z" finished-at="2013-05-10T21:42:24Z">
+    <test name="Test" duration-ms="27345" started-at="2013-05-12T11:57:07Z" finished-at="2013-05-12T11:57:34Z">
       <class name="org.hh.test.TestRunner">
-        <test-method status="PASS" signature="test_Price(java.lang.String, java.lang.String)[pri:0, instance:org.hh.test.TestRunner@74d22e]" name="test_Price" duration-ms="9175" started-at="2013-05-11T00:42:15Z" finished-at="2013-05-11T00:42:24Z">
+        <test-method status="PASS" signature="test_Price(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:org.hh.test.TestRunner@1bed348]" name="test_Price" duration-ms="27335" started-at="2013-05-12T14:57:07Z" finished-at="2013-05-12T14:57:34Z">
           <params>
             <param index="0">
               <value>
@@ -20,6 +20,21 @@
             <param index="1">
               <value>
                 <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[abukhvostov@mail.ru]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[yananikita123]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[on]]>
               </value>
             </param>
           </params>

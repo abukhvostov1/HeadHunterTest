@@ -3,11 +3,13 @@
  */
 package org.hh.core.pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 
 /**
- * To Login to HH (can't be done yet, because of author logged in by jobs.tut.by
- * TODO: Should be implemented soon
+ * To Login to HH
  * 
  * @author Alexander Bukhvostov
  * 
@@ -25,8 +27,24 @@ public class LoginPage extends AbstractPage {
 	 */
 	@Override
 	public void openPage(String url) {
-		// TODO Auto-generated method stub
-
 	}
 
+	/**
+	 * This function have some tips and tricks to use page elements........... I
+	 * think this is selenium problem
+	 * 
+	 * @param userName
+	 * @param password
+	 * @param remember
+	 * @return
+	 */
+	public PriceMain login(String userName, String password, String remember) {
+		sleep(1000);
+		WebElement webAction = driver.findElement(By.name("action"));
+		sendText("loginform-input-username", userName);
+		sendText("loginform-input-password", password);
+		sendText("loginform-input-remember", remember);
+		webAction.submit();
+		return PageFactory.initElements(driver, PriceMain.class);
+	}
 }

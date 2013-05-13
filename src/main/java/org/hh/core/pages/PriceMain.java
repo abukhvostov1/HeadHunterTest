@@ -6,6 +6,7 @@ package org.hh.core.pages;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.PageFactory;
 
 /**
  * hh.ru/price main page
@@ -32,4 +33,11 @@ public class PriceMain extends AbstractPage {
 		System.out.println("Will open page " + url);
 	}
 
+	/**
+	 * Login to private room
+	 */
+	public LoginPage clickLogin() {
+		openPage("http://hh.ru/login");
+		return PageFactory.initElements(driver, LoginPage.class);
+	}
 }

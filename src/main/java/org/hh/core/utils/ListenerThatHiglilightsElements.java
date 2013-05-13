@@ -38,7 +38,7 @@ public class ListenerThatHiglilightsElements extends
 	}
 
 	/**
-	 * Set need highlight (do not say anybody) :-)
+	 * Set needed highlight (do not say anybody) :-)
 	 * 
 	 * @param color
 	 * @param count
