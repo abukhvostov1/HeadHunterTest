@@ -9,7 +9,7 @@
 		<parameter name="remember" value="on" />
 		<groups>
 			<run>
-				<include name="test_Price" />
+				<include name="test_Login" />
 			</run>
 		</groups>
 		<classes>

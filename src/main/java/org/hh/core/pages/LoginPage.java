@@ -6,7 +6,6 @@ package org.hh.core.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.PageFactory;
 
 /**
  * To Login to HH
@@ -38,13 +37,12 @@ public class LoginPage extends AbstractPage {
 	 * @param remember
 	 * @return
 	 */
-	public PriceMain login(String userName, String password, String remember) {
+	public void login(String userName, String password, String remember) {
 		sleep(1000);
 		WebElement webAction = driver.findElement(By.name("action"));
 		sendText("loginform-input-username", userName);
 		sendText("loginform-input-password", password);
 		sendText("loginform-input-remember", remember);
 		webAction.submit();
-		return PageFactory.initElements(driver, PriceMain.class);
 	}
 }
