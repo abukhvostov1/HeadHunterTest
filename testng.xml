@@ -4,8 +4,8 @@
 	<test name="Test">
 		<parameter name="imageEnabled" value="2" />
 		<parameter name="url" value="http://hh.ru/price" />
-		<parameter name="userName" value="abukhvostov@mail.ru" />
-		<parameter name="password" value="yananikita123" />
+		<parameter name="userName" value="************" />
+		<parameter name="password" value="************" />
 		<parameter name="remember" value="on" />
 		<groups>
 			<run>
